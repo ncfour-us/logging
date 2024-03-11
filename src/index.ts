@@ -1,5 +1,3 @@
-export class Hello {
-  public sayHello() {
-    return 'hello, world!';
-  }
-}
+// Copyright (c) 2024 Tim Hahn
+
+export { LogLevel, Logger } from "./logging.js";

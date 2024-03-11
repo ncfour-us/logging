@@ -1,9 +1,9 @@
-import { TypeScriptESMProject } from '@ncfour/projen-utils';
+import { TypeScriptESMProject } from "@ncfour/projen-utils";
 const project = new TypeScriptESMProject({
   authorName: "Tim Hahn",
   authorEmail: "hahntj@gmail.com",
   defaultReleaseBranch: "main",
-  name: "projen-utils",
+  name: "logging",
   projenrcTs: true,
   repository: "https://github.com/hahntj/ncfour/logging.git",
 
@@ -21,10 +21,12 @@ const project = new TypeScriptESMProject({
     prettier: true,
   },
 
-  devDeps: ['@ncfour/projen-utils@file:../projen-utils/dist/js/projen-utils-0.0.0.jsii.tgz'],
+  devDeps: [
+    "@ncfour/projen-utils@file:../projen-utils/dist/js/projen-utils-0.0.0.jsii.tgz",
+    "@jest/globals",
+  ],
 
-  // deps: [],                /* Runtime dependencies of this module. */
-  // description: undefined,  /* The description is just a string that helps people understand the purpose of the package. */
-  // packageName: undefined,  /* The "name" in package.json. */
+  /* Runtime dependencies of this module. */
+  deps: [],
 });
 project.synth();

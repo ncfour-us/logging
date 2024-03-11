@@ -30,6 +30,7 @@
     "organization": false
   },
   "devDependencies": {
+    "@jest/globals": "^29.7.0",
     "@ncfour/projen-utils": "file:../projen-utils/dist/js/projen-utils-0.0.0.jsii.tgz",
     "@types/jest": "^29.5.12",
     "@types/node": "^18",
