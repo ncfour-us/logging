@@ -8,6 +8,14 @@ export enum LogLevel {
   ALL = 100,
 }
 
+const logLevelStrings: { [id: number]: string } = {
+  10: "SEV",
+  20: "ERR",
+  30: "INF",
+  40: "DEB",
+  100: "ALL",
+};
+
 const loggers: { [id: string]: Logger } = {};
 
 export class Logger {
@@ -28,12 +36,18 @@ export class Logger {
   private component: string;
   private logLevel: LogLevel;
   private insertPrefix: boolean;
+  private insertTimestamp: boolean;
+  private insertLevel: boolean;
+  private useColor: boolean;
 
   // callable only from static methods
   private constructor(component: string) {
     this.component = component;
     this.logLevel = LogLevel.INFO;
     this.insertPrefix = true;
+    this.insertTimestamp = false;
+    this.insertLevel = false;
+    this.useColor = false;
   }
 
   public setLevel(logLevel: LogLevel) {
@@ -42,6 +56,18 @@ export class Logger {
 
   public setInsertPrefix(insertPrefix: boolean) {
     this.insertPrefix = insertPrefix;
+  }
+
+  public setInsertTimestamp(insertTimestamp: boolean) {
+    this.insertTimestamp = insertTimestamp;
+  }
+
+  public setInsertLevel(insertLevel: boolean) {
+    this.insertLevel = insertLevel;
+  }
+
+  public setUseColor(useColor: boolean) {
+    this.useColor = useColor;
   }
 
   public debug(message: string) {
@@ -62,18 +88,29 @@ export class Logger {
 
   public log(level: LogLevel, message: string) {
     if (this.logLevel >= level) {
-      this.emitMessage(message);
+      this.emitMessage(level, message);
     }
   }
 
-  private emitMessage(message: string) {
-    let prefix = "";
+  private emitMessage(level: LogLevel, message: string) {
+    let prefixStr = "";
+    let levelStr = "";
+    let timestampStr = "";
 
     if (this.insertPrefix) {
-      prefix = `(${this.component}): `;
+      if (this.insertLevel) {
+        levelStr = `[${logLevelStrings[level]}] `;
+      }
+      if (this.insertTimestamp) {
+        const date: Date = new Date();
+        timestampStr = `[${date.toISOString()}] `;
+      }
+      if (this.useColor) {
+      }
+      prefixStr = `${levelStr}${timestampStr}(${this.component}): `;
     }
 
-    console.log(`${prefix}${message}`);
+    console.log(`${prefixStr}${message}`);
   }
 }
 
