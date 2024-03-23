@@ -1,11 +1,13 @@
 import { TypeScriptESMProject } from "@ncfour/projen-utils";
+import { NodePackageManager } from "projen/lib/javascript";
+
 const project = new TypeScriptESMProject({
   authorName: "Tim Hahn",
   authorEmail: "hahntj@gmail.com",
   defaultReleaseBranch: "main",
   name: "logging",
   projenrcTs: true,
-  packageManager: "npm",
+  packageManager: NodePackageManager.NPM,
   repository: "https://github.com/hahntj/ncfour/logging.git",
 
   // set up the package name in package.json
