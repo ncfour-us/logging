@@ -25,7 +25,7 @@ const project = new TypeScriptESMProject({
   },
 
   devDeps: [
-    "@ncfour/projen-utils@file:../projen-utils/dist/js/projen-utils-0.0.0.jsii.tgz",
+    "@ncfour/projen-utils@file:../projen-utils/dist/js/projen-utils@0.0.0.jsii.tgz",
     "@jest/globals",
   ],
 
