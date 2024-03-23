@@ -5,6 +5,7 @@ const project = new TypeScriptESMProject({
   defaultReleaseBranch: "main",
   name: "logging",
   projenrcTs: true,
+  packageManager: "npm",
   repository: "https://github.com/hahntj/ncfour/logging.git",
 
   // set up the package name in package.json
