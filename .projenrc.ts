@@ -1,5 +1,5 @@
 import { TypeScriptESMProject } from "@ncfour/projen-utils";
-import { NodePackageManager } from "projen/lib/javascript";
+import { javascript } from "projen";
 
 const project = new TypeScriptESMProject({
   authorName: "Tim Hahn",
@@ -7,7 +7,7 @@ const project = new TypeScriptESMProject({
   defaultReleaseBranch: "main",
   name: "logging",
   projenrcTs: true,
-  packageManager: NodePackageManager.NPM,
+  packageManager: javascript.NodePackageManager.NPM,
   repository: "https://github.com/hahntj/ncfour/logging.git",
 
   // set up the package name in package.json
@@ -25,7 +25,7 @@ const project = new TypeScriptESMProject({
   },
 
   devDeps: [
-    "@ncfour/projen-utils@file:../projen-utils/dist/js/projen-utils@0.0.0.jsii.tgz",
+    "@ncfour/projen-utils@file:/home/tjh/Projects/repos/ncfour/projen-utils/dist/js/projen-utils@0.0.0.jsii.tgz",
     "@jest/globals",
   ],
 
