@@ -9,11 +9,11 @@ export enum LogLevel {
 }
 
 const logLevelStrings: { [id: number]: string } = {
-  10: "SEV",
-  20: "ERR",
-  30: "INF",
-  40: "DEB",
-  100: "ALL",
+  10: 'SEV',
+  20: 'ERR',
+  30: 'INF',
+  40: 'DEB',
+  100: 'ALL',
 };
 
 const loggers: { [id: string]: Logger } = {};
@@ -93,9 +93,9 @@ export class Logger {
   }
 
   private emitMessage(level: LogLevel, message: string) {
-    let prefixStr = "";
-    let levelStr = "";
-    let timestampStr = "";
+    let prefixStr = '';
+    let levelStr = '';
+    let timestampStr = '';
 
     if (this.insertPrefix) {
       if (this.insertLevel) {
@@ -114,4 +114,4 @@ export class Logger {
   }
 }
 
-loggers.root = Logger.getLogger("root");
+loggers.root = Logger.getLogger('root');
