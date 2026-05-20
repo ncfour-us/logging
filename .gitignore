@@ -46,5 +46,5 @@ junit.xml
 !/src/
 /lib
 /dist/
-!/.eslintrc.json
+!/.pre-commit-config.yaml
 !/.projenrc.ts

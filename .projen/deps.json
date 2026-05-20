@@ -1,12 +1,28 @@
 {
   "dependencies": [
     {
+      "name": "@eslint/compat",
+      "type": "build"
+    },
+    {
+      "name": "@eslint/eslintrc",
+      "type": "build"
+    },
+    {
+      "name": "@eslint/js",
+      "type": "build"
+    },
+    {
       "name": "@jest/globals",
       "type": "build"
     },
     {
       "name": "@ncfour/projen-utils",
       "version": "file:/home/tjh/Projects/repos/ncfour/projen-utils/dist/js/projen-utils@0.0.0.jsii.tgz",
+      "type": "build"
+    },
+    {
+      "name": "@stylistic/eslint-plugin",
       "type": "build"
     },
     {
@@ -20,12 +36,10 @@
     },
     {
       "name": "@typescript-eslint/eslint-plugin",
-      "version": "^8",
       "type": "build"
     },
     {
       "name": "@typescript-eslint/parser",
-      "version": "^8",
       "type": "build"
     },
     {
@@ -39,7 +53,7 @@
       "type": "build"
     },
     {
-      "name": "eslint-config-prettier",
+      "name": "eslint",
       "type": "build"
     },
     {
@@ -51,12 +65,7 @@
       "type": "build"
     },
     {
-      "name": "eslint-plugin-prettier",
-      "type": "build"
-    },
-    {
-      "name": "eslint",
-      "version": "^9",
+      "name": "globals",
       "type": "build"
     },
     {
@@ -66,6 +75,10 @@
     {
       "name": "jest-junit",
       "version": "^17",
+      "type": "build"
+    },
+    {
+      "name": "jiti",
       "type": "build"
     },
     {

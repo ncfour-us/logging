@@ -31,5 +31,15 @@ const project = new TypeScriptESMProject({
 
   /* Runtime dependencies of this module. */
   deps: [],
+
+  eslintFlatConfig: true,
+  precommitConfig: true,
 });
+
+project.addFields({
+  exports: {
+    '.': './lib/loggers.js',
+  },
+});
+
 project.synth();
