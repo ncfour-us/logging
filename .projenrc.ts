@@ -38,7 +38,7 @@ const project = new TypeScriptESMProject({
 
 project.addFields({
   exports: {
-    '.': './lib/loggers.js',
+    '.': './lib/logger.js',
   },
 });
 

@@ -3,9 +3,13 @@
 // import { Date } from 'date';
 import chalk, { Chalk } from 'chalk';
 
-import { ILogger, LoggerLevels, LoggerProps, LoggerSetLoggerProps } from './logger.js';
-
-const simpleLoggers: SimpleLogger[] = [];
+import {
+  ILogger,
+  LoggerType,
+  LoggerLevel,
+  LoggerProps,
+  LoggerSetLoggerProps,
+} from './logger-types.js';
 
 const logLevels: { [key: string]: { numericLevel: number; colorizer: Chalk } } = {
   fatal: {
@@ -35,23 +39,6 @@ const logLevels: { [key: string]: { numericLevel: number; colorizer: Chalk } } =
 };
 
 export class SimpleLogger implements ILogger {
-  public static getSimpleLogger(props?: LoggerProps): SimpleLogger {
-    let simpleLogger: SimpleLogger | undefined = simpleLoggers[0];
-
-    if (props?.name) {
-      simpleLogger = simpleLoggers.find((item: SimpleLogger) => {
-        return props?.name === item.name;
-      });
-
-      if (!simpleLogger) {
-        simpleLogger = new SimpleLogger(props);
-        simpleLoggers.push(simpleLogger);
-      }
-    }
-
-    return simpleLogger;
-  }
-
   name: string;
   level: string;
   json: boolean;
@@ -62,7 +49,7 @@ export class SimpleLogger implements ILogger {
   private numericLevel: number;
 
   constructor(props?: LoggerProps) {
-    this.name = props?.name ?? '';
+    this.name = props?.name ?? 'default';
     this.level = props?.level ?? 'error';
     this.json = props?.json ?? true;
     this.color = props?.color ?? false;
@@ -73,7 +60,7 @@ export class SimpleLogger implements ILogger {
   }
 
   private stringifyLogRecord(
-    level: LoggerLevels,
+    level: LoggerLevel,
     message: string,
     ...rest: (string | number | boolean | object)[]
   ): string {
@@ -91,18 +78,25 @@ export class SimpleLogger implements ILogger {
       // messageString = messageString + this.timestamp ? '[' + new Date(Date.now()).toISOString() : "[";
 
       messageString =
-        messageString + (this.timestamp ? '[' + new Date(Date.now()).toISOString() : '[');
+        messageString + (this.timestamp ? `[${new Date(Date.now()).toISOString()} ` : '[');
+      messageString = messageString + (this.name !== 'default' ? `${this.name} ` : '');
       messageString =
-        messageString + (this.name !== '' ? (this.timestamp ? ' ' : '') + this.name : '');
+        messageString + `(${this.color ? logLevels[level].colorizer(level) : level})]`;
       messageString =
-        messageString + (this.timestamp || this.name !== '' ? ' ' : '') + '(' + level + ')]';
-      messageString = this.color ? `${logLevels[level].colorizer(messageString)}` : messageString;
-      messageString = messageString + ' ' + message;
+        messageString + ` ${this.color ? logLevels[level].colorizer(message) : message}`;
       messageString =
-        rest.length > 0 ? messageString + ' ' + JSON.stringify({ ...rest }) : messageString;
+        rest.length > 0 ? messageString + ` ${JSON.stringify({ ...rest })}` : messageString;
     }
 
     return messageString;
+  }
+
+  public getName(): string {
+    return this.name;
+  }
+
+  public getType(): LoggerType {
+    return 'simple';
   }
 
   public setLoggerProps(props: LoggerSetLoggerProps) {
@@ -116,7 +110,7 @@ export class SimpleLogger implements ILogger {
   }
 
   public log(
-    level: LoggerLevels,
+    level: LoggerLevel,
     message: string,
     ...rest: (string | number | boolean | object)[]
   ): void {
@@ -150,15 +144,6 @@ export class SimpleLogger implements ILogger {
   }
 }
 
-(() => {
-  simpleLoggers.push(
-    new SimpleLogger({
-      name: '',
-      level: 'warn',
-      json: true,
-      color: false,
-      silent: false,
-      timestamp: true,
-    }),
-  );
-})();
+export function createSimpleLogger(props?: LoggerProps): ILogger {
+  return new SimpleLogger(props);
+}

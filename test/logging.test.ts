@@ -5,9 +5,6 @@ import { describe, jest, test, expect } from '@jest/globals';
 
 import { LogLevel, Logger } from '../src';
 
-import { ILogger } from '../src/logger.js';
-import { SimpleLogger } from '../src/simple-logger.js';
-
 describe('old logger tests', () => {
   test('logger', () => {
     const logger = Logger.getLogger('test');
@@ -92,18 +89,5 @@ describe('old logger tests', () => {
     expect(logSpy.mock.calls[2][0]).toMatch(/^\[[0-9-:.TZ]*\] \(test4\): test INFO message 2$/);
 
     logSpy.mockRestore();
-  });
-});
-
-describe('SimpleLogger tests', () => {
-  test('SimpleLogger creation', () => {
-    const logger: ILogger = SimpleLogger.getSimpleLogger({
-      name: 'mylogger',
-      level: 'debug',
-    });
-
-    logger.info('hello from SimpleLogger');
-
-    expect(logger).toBeDefined();
   });
 });
