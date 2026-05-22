@@ -8,7 +8,7 @@ const project = new TypeScriptESMProject({
   name: 'logging',
   projenrcTs: true,
   packageManager: javascript.NodePackageManager.PNPM,
-  repository: 'https://github.com/ncfour-us/logging.git',
+  repository: 'git+https://github.com/ncfour-us/logging.git',
 
   // set up the package name in package.json
   packageName: '@ncfour-us/logging',
