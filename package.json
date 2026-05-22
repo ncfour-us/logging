@@ -1,8 +1,8 @@
 {
-  "name": "@ncfour/logging",
+  "name": "@ncfour-us/logging",
   "repository": {
     "type": "git",
-    "url": "https://github.com/hahntj/ncfour/logging.git"
+    "url": "https://github.com/ncfour-us/logging.git"
   },
   "scripts": {
     "build": "projen build",
@@ -34,7 +34,7 @@
     "@eslint/eslintrc": "^3.3.5",
     "@eslint/js": "^9.39.4",
     "@jest/globals": "^29.7.0",
-    "@ncfour/projen-utils": "file:/home/tjh/Projects/repos/ncfour/projen-utils/dist/js/projen-utils@0.0.0.jsii.tgz",
+    "@ncfour-us/projen-utils": "^0.0.0",
     "@stylistic/eslint-plugin": "^5.10.0",
     "@types/jest": "^29.5.14",
     "@types/node": "^18",
