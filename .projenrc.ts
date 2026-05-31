@@ -1,4 +1,4 @@
-import { TypeScriptESMProject } from '@ncfour-us/projen-utils';
+import { RepoBuildPackageModel, TypeScriptESMProject } from '@ncfour-us/projen-utils';
 import { javascript } from 'projen';
 
 const project = new TypeScriptESMProject({
@@ -8,7 +8,7 @@ const project = new TypeScriptESMProject({
   name: 'logging',
   projenrcTs: true,
   packageManager: javascript.NodePackageManager.PNPM,
-  repository: 'git+https://github.com/ncfour-us/logging.git',
+  repository: 'https://github.com/ncfour-us/logging.git',
 
   // set up the package name in package.json
   packageName: '@ncfour-us/logging',
@@ -30,7 +30,11 @@ const project = new TypeScriptESMProject({
   deps: ['chalk', 'winston'],
 
   eslintFlatConfig: true,
+  prettierFlatConfig: true,
   precommitConfig: true,
+
+  repoBuildPackageModel: RepoBuildPackageModel.LOCAL_DEV_BUILD_REGISTRY,
+  localPackageArchiveDir: '~/.tjh-packages',
 });
 
 project.addFields({

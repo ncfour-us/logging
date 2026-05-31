@@ -2,7 +2,7 @@
   "name": "@ncfour-us/logging",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ncfour-us/logging.git"
+    "url": "https://github.com/ncfour-us/logging.git"
   },
   "scripts": {
     "build": "projen build",
@@ -16,6 +16,7 @@
     "post-compile": "projen post-compile",
     "post-upgrade": "projen post-upgrade",
     "pre-compile": "projen pre-compile",
+    "publish:git": "projen publish:git",
     "release": "projen release",
     "test": "projen test",
     "test:watch": "projen test:watch",
@@ -34,10 +35,10 @@
     "@eslint/eslintrc": "^3.3.5",
     "@eslint/js": "^9.39.4",
     "@jest/globals": "^29.7.0",
-    "@ncfour-us/projen-utils": "^0.0.0",
+    "@ncfour-us/projen-utils": "^0.1.1",
     "@stylistic/eslint-plugin": "^5.10.0",
     "@types/jest": "^29.5.14",
-    "@types/node": "^18",
+    "@types/node": "^24",
     "@typescript-eslint/eslint-plugin": "^8.59.4",
     "@typescript-eslint/parser": "^8.59.4",
     "commit-and-tag-version": "^12",
@@ -50,7 +51,7 @@
     "jest-junit": "^17",
     "jiti": "^2.7.0",
     "prettier": "^3.8.3",
-    "projen": "^0.99.63",
+    "projen": "^0.99.70",
     "ts-jest": "^29.4.11",
     "ts-node": "^10.9.2",
     "tsx": "^4.22.3",
@@ -62,7 +63,7 @@
   },
   "pnpm": {},
   "engines": {
-    "node": ">= 18.0.0"
+    "node": ">= 24.0.0"
   },
   "devEngines": {
     "packageManager": {
