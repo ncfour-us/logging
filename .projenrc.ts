@@ -18,12 +18,6 @@ const project = new TypeScriptESMProject({
   copyrightOwner: 'Tim Hahn',
   copyrightPeriod: '2024',
 
-  // eslint options
-  eslintOptions: {
-    dirs: ['src'],
-    prettier: true,
-  },
-
   devDeps: ['@ncfour-us/projen-utils', '@jest/globals'],
 
   /* Runtime dependencies of this module. */
