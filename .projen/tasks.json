@@ -176,8 +176,8 @@
           "builtin": "release/tag-version"
         },
         {
-          "exec": "cp dist/js/@ncfour-us/logging-$(cat dist/version.txt).tgz ~/.tjh-packages/.",
-          "name": "copy package to ${this.localPackageArchiveDir} folder"
+          "exec": "cp dist/js/ncfour-us-logging-$(cat dist/version.txt).tgz ~/.tjh-packages/.",
+          "name": "copy package to ~/.tjh-packages folder"
         }
       ],
       "condition": "git log --oneline -1 | grep -qv \"chore(release):\""
