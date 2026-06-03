@@ -1,4 +1,11 @@
 
+## [0.0.7](https://github.com/ncfour-us/logging/compare/v0.0.6...v0.0.7) (2026-06-03)
+
+
+### Features
+
+* remove dry-run to activate publish tasks ([44951ba](https://github.com/ncfour-us/logging/commit/44951ba81c0af37b39788aacc1f0a3cd92aca0d4))
+
 ## [0.0.6](https://github.com/ncfour-us/logging/compare/v0.0.5...v0.0.6) (2026-06-03)
 
 
