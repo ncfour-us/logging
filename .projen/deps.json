@@ -18,7 +18,6 @@
     },
     {
       "name": "@ncfour-us/projen-utils",
-      "version": "file://../projen-utils/dist/js/projen-utils@0.0.0.jsii.tgz",
       "type": "build"
     },
     {

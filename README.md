@@ -9,4 +9,10 @@ to log activities in the application.
 
 The package can be used in either browser-based or Node-based runtime environments.
 
-More documentation to come.
+To use the logger, call `createLogger()`:
+
+```typescript
+import { ILogger, createLogger } from '@ncfour-us/logging';
+
+const myLogger: ILogger = createLogger('simple');
+```

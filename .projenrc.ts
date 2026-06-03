@@ -19,10 +19,7 @@ const project = new TypeScriptESMProject({
   copyrightOwner: 'Tim Hahn',
   copyrightPeriod: '2024',
 
-  devDeps: [
-    '@ncfour-us/projen-utils@file://../projen-utils/dist/js/projen-utils@0.0.0.jsii.tgz',
-    '@jest/globals',
-  ],
+  devDeps: ['@ncfour-us/projen-utils', '@jest/globals'],
 
   /* Runtime dependencies of this module. */
   deps: ['chalk', 'winston'],
