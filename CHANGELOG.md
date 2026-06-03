@@ -1,4 +1,11 @@
 
+## [0.0.4](///compare/v0.0.3...v0.0.4) (2026-06-03)
+
+
+### Bug Fixes
+
+* comment out repository setting in projenrc - no remote repository exists yet 6ab547c
+
 ## [0.0.3](https://github.com/ncfour-us/logging/compare/v0.0.2...v0.0.3) (2026-06-03)
 
 
