@@ -28,8 +28,8 @@ importers:
         specifier: ^29.7.0
         version: 29.7.0
       '@ncfour-us/projen-utils':
-        specifier: ^0.1.8
-        version: 0.1.8(constructs@10.6.0)(projen@0.99.70(constructs@10.6.0))
+        specifier: ^0.1.9
+        version: 0.1.9(constructs@10.6.0)(projen@0.99.70(constructs@10.6.0))
       '@stylistic/eslint-plugin':
         specifier: ^5.10.0
         version: 5.10.0(eslint@9.39.4(jiti@2.7.0))
@@ -608,8 +608,8 @@ packages:
       '@emnapi/core': ^1.7.1
       '@emnapi/runtime': ^1.7.1
 
-  '@ncfour-us/projen-utils@0.1.8':
-    resolution: {integrity: sha512-kDpgi8PDZuS6oewP+/Ue3Tl20a8AZbzFAidyE8HpnwjLXRX27c5X8gPIz1dJDOwYHCy1NR458JZ+2tz5RqzNoQ==}
+  '@ncfour-us/projen-utils@0.1.9':
+    resolution: {integrity: sha512-tqGqibWGGosUJJy0RcTfaycC2GnxD3+z82W/8QS2C3pNOkn7CuVBalxsBAvN75aWBLUl6Y7fLcYiaH7WImfbWg==}
     peerDependencies:
       constructs: ^10.6.0
       projen: ^0.99.70
@@ -3639,7 +3639,7 @@ snapshots:
       '@tybys/wasm-util': 0.10.2
     optional: true
 
-  '@ncfour-us/projen-utils@0.1.8(constructs@10.6.0)(projen@0.99.70(constructs@10.6.0))':
+  '@ncfour-us/projen-utils@0.1.9(constructs@10.6.0)(projen@0.99.70(constructs@10.6.0))':
     dependencies:
       constructs: 10.6.0
       projen: 0.99.70(constructs@10.6.0)

@@ -201,7 +201,7 @@
       },
       "steps": [
         {
-          "exec": "npm publish false dist/js/ncfour-us-logging-$(cat dist/version.txt).tgz"
+          "exec": "npm publish dist/js/ncfour-us-logging-$(cat dist/version.txt).tgz"
         }
       ],
       "condition": "test -f \"dist/version.txt\" && test \"$(git branch --show-current)\" = \"main\""
