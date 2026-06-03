@@ -196,8 +196,7 @@
       "description": "Publish this package to npm",
       "env": {
         "NPM_DIST_TAG": "latest",
-        "NPM_REGISTRY": "registry.npmjs.org",
-        "NPM_CONFIG_PROVENANCE": "true"
+        "NPM_REGISTRY": "registry.npmjs.org"
       },
       "steps": [
         {
@@ -289,7 +288,7 @@
       },
       "steps": [
         {
-          "exec": "pnpm dlx npm-check-updates@20 --upgrade --target=minor --peer --no-deprecated --dep=dev,peer,prod,optional --filter=@eslint/compat,@eslint/eslintrc,@eslint/js,@jest/globals,@ncfour-us/projen-utils,@stylistic/eslint-plugin,@types/jest,@typescript-eslint/eslint-plugin,@typescript-eslint/parser,eslint,eslint-import-resolver-typescript,eslint-plugin-import,globals,jest,jiti,prettier,projen,ts-jest,ts-node,tsx,typescript,chalk,winston"
+          "exec": "pnpm dlx npm-check-updates@20 --upgrade --target=minor --peer --no-deprecated --dep=dev,peer,prod,optional --filter=@eslint/compat,@eslint/eslintrc,@eslint/js,@jest/globals,@stylistic/eslint-plugin,@types/jest,@typescript-eslint/eslint-plugin,@typescript-eslint/parser,eslint,eslint-import-resolver-typescript,eslint-plugin-import,globals,jest,jiti,prettier,projen,ts-jest,ts-node,tsx,typescript,chalk,winston"
         },
         {
           "exec": "pnpm i --no-frozen-lockfile"
