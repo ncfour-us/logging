@@ -1,4 +1,11 @@
 
+## [0.0.12](https://github.com/ncfour-us/logging/compare/v0.0.11...v0.0.12) (2026-06-03)
+
+
+### Features
+
+* add keywords to package ([e20a8ff](https://github.com/ncfour-us/logging/commit/e20a8ffd59107f9d2ffcaa32c8c8be89e31b0b72))
+
 ## [0.0.11](https://github.com/ncfour-us/logging/compare/v0.0.10...v0.0.11) (2026-06-03)
 
 
