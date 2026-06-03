@@ -1,4 +1,11 @@
 
+## [0.0.9](https://github.com/ncfour-us/logging/compare/v0.0.8...v0.0.9) (2026-06-03)
+
+
+### Features
+
+* add minimal information to README file ([1a3c706](https://github.com/ncfour-us/logging/commit/1a3c70611002ed120ad62541c5e2388ef3c86304))
+
 ## [0.0.8](https://github.com/ncfour-us/logging/compare/v0.0.7...v0.0.8) (2026-06-03)
 
 ## [0.0.7](https://github.com/ncfour-us/logging/compare/v0.0.6...v0.0.7) (2026-06-03)
