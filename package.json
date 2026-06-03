@@ -18,6 +18,7 @@
     "pre-compile": "projen pre-compile",
     "publish:git": "projen publish:git",
     "publish:local": "projen publish:local",
+    "publish:npm": "projen publish:npm",
     "release": "projen release",
     "test": "projen test",
     "test:watch": "projen test:watch",

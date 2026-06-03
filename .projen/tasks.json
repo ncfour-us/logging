@@ -185,8 +185,23 @@
       "name": "publish:local",
       "steps": [
         {
-          "name": "copy package to ~/.tjh-packages folder (dryrun: false)",
-          "exec": "cp dist/js/ncfour-us-logging-$(cat dist/version.txt).tgz ~/.tjh-packages/."
+          "name": "copy package to ~/.tjh-packages folder (dryrun: true)",
+          "exec": "echo cp dist/js/ncfour-us-logging-$(cat dist/version.txt).tgz ~/.tjh-packages/."
+        }
+      ],
+      "condition": "test -f \"dist/version.txt\" && test \"$(git branch --show-current)\" = \"main\""
+    },
+    "publish:npm": {
+      "name": "publish:npm",
+      "description": "Publish this package to npm",
+      "env": {
+        "NPM_DIST_TAG": "latest",
+        "NPM_REGISTRY": "registry.npmjs.org",
+        "NPM_CONFIG_PROVENANCE": "true"
+      },
+      "steps": [
+        {
+          "exec": "npm publish --dry-run dist/js/ncfour-us-logging-$(cat dist/version.txt).tgz"
         }
       ],
       "condition": "test -f \"dist/version.txt\" && test \"$(git branch --show-current)\" = \"main\""
@@ -218,6 +233,9 @@
         },
         {
           "spawn": "publish:local"
+        },
+        {
+          "spawn": "publish:npm"
         }
       ]
     },
