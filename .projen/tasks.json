@@ -186,7 +186,7 @@
       "description": "Publish this package to GitHub Releases",
       "steps": [
         {
-          "exec": "echo gh release create $(cat dist/releasetag.txt) --notes-file dist/changelog.md --title $(cat dist/releasetag.txt) --verify-tag"
+          "exec": "gh release create $(cat dist/releasetag.txt) --notes-file dist/changelog.md --title $(cat dist/releasetag.txt) --verify-tag"
         }
       ],
       "condition": "test -f \"dist/version.txt\" && test \"$(git branch --show-current)\" = \"main\""
@@ -195,8 +195,8 @@
       "name": "publish:local",
       "steps": [
         {
-          "name": "copy package to ~/.tjh-packages folder (dryrun: true)",
-          "exec": "echo cp dist/js/ncfour-us-logging-$(cat dist/version.txt).tgz ~/.tjh-packages/."
+          "name": "copy package to ~/.tjh-packages folder (dryrun: false)",
+          "exec": "cp dist/js/ncfour-us-logging-$(cat dist/version.txt).tgz ~/.tjh-packages/."
         }
       ],
       "condition": "test -f \"dist/version.txt\" && test \"$(git branch --show-current)\" = \"main\""
@@ -210,7 +210,7 @@
       },
       "steps": [
         {
-          "exec": "npm publish --dry-run dist/js/ncfour-us-logging-$(cat dist/version.txt).tgz"
+          "exec": "npm publish dist/js/ncfour-us-logging-$(cat dist/version.txt).tgz"
         }
       ],
       "condition": "test -f \"dist/version.txt\" && test \"$(git branch --show-current)\" = \"main\""

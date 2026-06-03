@@ -34,7 +34,7 @@ const project = new TypeScriptESMProject({
   repoBuildPackageModel: RepoBuildPackageModel.LOCAL_DEV_BUILD_REGISTRY,
   localPackageArchiveDir: '~/.tjh-packages',
 
-  publishDryRun: true,
+  // publishDryRun: true,
   releaseToGithub: true,
   releaseToNpm: true,
 });
