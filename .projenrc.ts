@@ -9,6 +9,7 @@ const project = new TypeScriptESMProject({
   projenrcTs: true,
   packageManager: javascript.NodePackageManager.PNPM,
   repository: 'https://github.com/ncfour-us/logging.git',
+  keywords: ['logging', 'winston', 'browser', 'node'],
 
   // set up the package name in package.json
   packageName: '@ncfour-us/logging',

@@ -64,6 +64,12 @@
     "winston": "^3.19.0"
   },
   "pnpm": {},
+  "keywords": [
+    "browser",
+    "logging",
+    "node",
+    "winston"
+  ],
   "engines": {
     "node": ">= 24.0.0"
   },
