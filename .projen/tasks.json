@@ -184,9 +184,6 @@
     "publish:github": {
       "name": "publish:github",
       "description": "Publish this package to GitHub Releases",
-      "requiredEnv": [
-        "GITHUB_TOKEN"
-      ],
       "steps": [
         {
           "exec": "would run: gh release create $(cat dist/releasetag.txt) --notes-file dist/changelog.md --title $(cat dist/releasetag.txt) --verify-tag"
