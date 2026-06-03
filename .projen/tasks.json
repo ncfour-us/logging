@@ -186,7 +186,7 @@
       "description": "Publish this package to GitHub Releases",
       "steps": [
         {
-          "exec": "would run: gh release create $(cat dist/releasetag.txt) --notes-file dist/changelog.md --title $(cat dist/releasetag.txt) --verify-tag"
+          "exec": "echo gh release create $(cat dist/releasetag.txt) --notes-file dist/changelog.md --title $(cat dist/releasetag.txt) --verify-tag"
         }
       ],
       "condition": "test -f \"dist/version.txt\" && test \"$(git branch --show-current)\" = \"main\""

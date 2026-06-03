@@ -609,7 +609,7 @@ packages:
       '@emnapi/runtime': ^1.7.1
 
   '@ncfour-us/projen-utils@file:../projen-utils/dist/js/projen-utils@0.0.0.jsii.tgz':
-    resolution: {integrity: sha512-cUkuW/lUY4guQHAz8ciFzfbnyrP6qGqyHIWCY0ZBfdU0KqTnE61NvXzIqQDbU4DgaQZv5MgbIJcx3a/K2LD/3w==, tarball: file:../projen-utils/dist/js/projen-utils@0.0.0.jsii.tgz}
+    resolution: {integrity: sha512-TTRz53k8l165afPyH22C21n/Hi1PGiZvIidnlZGfqBM145zhG3PKd7Ij+quTpxMMFI08ko7XY+byQA+UZFIWoQ==, tarball: file:../projen-utils/dist/js/projen-utils@0.0.0.jsii.tgz}
     version: 0.0.0
     peerDependencies:
       constructs: ^10.6.0
