@@ -1,4 +1,11 @@
 
+## [0.0.5](https://github.com/ncfour-us/logging/compare/v0.0.4...v0.0.5) (2026-06-03)
+
+
+### Features
+
+* link remote repo with local repo, enable publish:git action to push to remote ([c91d39c](https://github.com/ncfour-us/logging/commit/c91d39c292fce08b57932487410f06714b6379f0))
+
 ## [0.0.4](///compare/v0.0.3...v0.0.4) (2026-06-03)
 
 
