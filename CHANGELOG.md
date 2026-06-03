@@ -1,4 +1,11 @@
 
+## [0.0.6](https://github.com/ncfour-us/logging/compare/v0.0.5...v0.0.6) (2026-06-03)
+
+
+### Features
+
+* enable publish:npm task with dry-run enabled ([e925747](https://github.com/ncfour-us/logging/commit/e92574796fee3b5e8c02caaac35b68401e5780b6))
+
 ## [0.0.5](https://github.com/ncfour-us/logging/compare/v0.0.4...v0.0.5) (2026-06-03)
 
 
