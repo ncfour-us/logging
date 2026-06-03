@@ -1,4 +1,11 @@
 
+## [0.0.10](https://github.com/ncfour-us/logging/compare/v0.0.9...v0.0.10) (2026-06-03)
+
+
+### Features
+
+* add additional information to README file ([d7a120a](https://github.com/ncfour-us/logging/commit/d7a120a7d55c96bc4ec49d95b2da34f8b2d2270c))
+
 ## [0.0.9](https://github.com/ncfour-us/logging/compare/v0.0.8...v0.0.9) (2026-06-03)
 
 
