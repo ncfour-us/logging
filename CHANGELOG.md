@@ -1,4 +1,6 @@
 
+## [0.0.14](https://github.com/ncfour-us/logging/compare/v0.0.13...v0.0.14) (2026-06-03)
+
 ## [0.0.13](https://github.com/ncfour-us/logging/compare/v0.0.12...v0.0.13) (2026-06-03)
 
 ## [0.0.12](https://github.com/ncfour-us/logging/compare/v0.0.11...v0.0.12) (2026-06-03)
