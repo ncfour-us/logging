@@ -1,5 +1,9 @@
 {
   "name": "@ncfour-us/logging",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ncfour-us/logging.git"
+  },
   "scripts": {
     "build": "projen build",
     "bump": "projen bump",

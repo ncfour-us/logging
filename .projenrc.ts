@@ -8,7 +8,7 @@ const project = new TypeScriptESMProject({
   name: 'logging',
   projenrcTs: true,
   packageManager: javascript.NodePackageManager.PNPM,
-  // repository: 'https://github.com/ncfour-us/logging.git',
+  repository: 'https://github.com/ncfour-us/logging.git',
 
   // set up the package name in package.json
   packageName: '@ncfour-us/logging',
@@ -30,7 +30,7 @@ const project = new TypeScriptESMProject({
   repoBuildPackageModel: RepoBuildPackageModel.LOCAL_DEV_BUILD_REGISTRY,
   localPackageArchiveDir: '~/.tjh-packages',
 
-  publishDryRun: true,
+  // publishDryRun: true,
   releaseToGithub: false,
   releaseToNpm: false,
 });
