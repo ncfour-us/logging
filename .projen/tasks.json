@@ -174,9 +174,6 @@
         },
         {
           "builtin": "release/tag-version"
-        },
-        {
-          "exec": "git push --follow-tags origin main"
         }
       ],
       "condition": "git log --oneline -1 | grep -qv \"chore(release):\" && test \"$(git branch --show-current)\" = \"main\""
