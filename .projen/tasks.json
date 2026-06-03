@@ -176,11 +176,20 @@
           "builtin": "release/tag-version"
         },
         {
-          "exec": "cp dist/js/ncfour-us-logging-$(cat dist/version.txt).tgz ~/.tjh-packages/.",
-          "name": "copy package to ~/.tjh-packages folder"
+          "exec": "git push --follow-tags origin main"
         }
       ],
-      "condition": "git log --oneline -1 | grep -qv \"chore(release):\""
+      "condition": "git log --oneline -1 | grep -qv \"chore(release):\" && test \"$(git branch --show-current)\" = \"main\""
+    },
+    "publish:local": {
+      "name": "publish:local",
+      "steps": [
+        {
+          "name": "copy package to ~/.tjh-packages folder (dryrun: true)",
+          "exec": "echo cp dist/js/ncfour-us-logging-$(cat dist/version.txt).tgz ~/.tjh-packages/."
+        }
+      ],
+      "condition": "test -f \"dist/version.txt\" && test \"$(git branch --show-current)\" = \"main\""
     },
     "release": {
       "name": "release",
@@ -206,6 +215,9 @@
         },
         {
           "spawn": "publish:git"
+        },
+        {
+          "spawn": "publish:local"
         }
       ]
     },
