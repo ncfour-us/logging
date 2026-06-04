@@ -1,4 +1,11 @@
 
+## [0.0.20](https://github.com/ncfour-us/logging/compare/v0.0.19...v0.0.20) (2026-06-04)
+
+
+### Bug Fixes
+
+* empty commit to re-release ([af39b33](https://github.com/ncfour-us/logging/commit/af39b3311e5fea939056e99d5438a1b06ce316e2))
+
 ## [0.0.19](https://github.com/ncfour-us/logging/compare/v0.0.18...v0.0.19) (2026-06-04)
 
 
