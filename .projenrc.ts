@@ -42,4 +42,6 @@ project.addFields({
   },
 });
 
+project.addPackageIgnore('docs');
+
 project.synth();
