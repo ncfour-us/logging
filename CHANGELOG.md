@@ -1,4 +1,11 @@
 
+## [0.0.23](https://github.com/ncfour-us/logging/compare/v0.0.22...v0.0.23) (2026-06-04)
+
+
+### Bug Fixes
+
+* move _config.yml to root of repository ([7c8c7a9](https://github.com/ncfour-us/logging/commit/7c8c7a9009a46a4e1fe36f700fbe86976a8d002c))
+
 ## [0.0.22](https://github.com/ncfour-us/logging/compare/v0.0.21...v0.0.22) (2026-06-04)
 
 
