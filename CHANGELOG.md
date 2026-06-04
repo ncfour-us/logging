@@ -1,4 +1,13 @@
 
+## [0.0.24](https://github.com/ncfour-us/logging/compare/v0.0.23...v0.0.24) (2026-06-04)
+
+
+### Bug Fixes
+
+* move and adjust _config.yml ([4f67780](https://github.com/ncfour-us/logging/commit/4f6778053987ce2873b59b160f711ecab9d1ac56))
+* move and adjust _config.yml ([e6341b5](https://github.com/ncfour-us/logging/commit/e6341b5138c2b0ee12f37a6212fb54446cb4eaae))
+* remove duplicate file, fix section header level ([e14b10b](https://github.com/ncfour-us/logging/commit/e14b10b89c4542d14129ae14cc5f2281276705ec))
+
 ## [0.0.23](https://github.com/ncfour-us/logging/compare/v0.0.22...v0.0.23) (2026-06-04)
 
 
