@@ -1,4 +1,11 @@
 
+## [0.0.22](https://github.com/ncfour-us/logging/compare/v0.0.21...v0.0.22) (2026-06-04)
+
+
+### Features
+
+* add a theme to the Github pages documentation ([d28cdd8](https://github.com/ncfour-us/logging/commit/d28cdd82dbaef8db22f6acfbddcde1a5738890fb))
+
 ## [0.0.21](https://github.com/ncfour-us/logging/compare/v0.0.20...v0.0.21) (2026-06-04)
 
 
