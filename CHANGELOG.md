@@ -1,4 +1,16 @@
 
+## [0.0.19](https://github.com/ncfour-us/logging/compare/v0.0.18...v0.0.19) (2026-06-04)
+
+
+### Features
+
+* add a start at documentation in the docs folder ([a6df622](https://github.com/ncfour-us/logging/commit/a6df62245e88b76e1872b5729b525a06ec265768))
+
+
+### Bug Fixes
+
+* update package ignore to not package docs folder contents ([cf27767](https://github.com/ncfour-us/logging/commit/cf27767e911d9ae693da7dabbbd812f2169d1803))
+
 ## [0.0.18](https://github.com/ncfour-us/logging/compare/v0.0.17...v0.0.18) (2026-06-03)
 
 ## [0.0.17](https://github.com/ncfour-us/logging/compare/v0.0.16...v0.0.17) (2026-06-03)
