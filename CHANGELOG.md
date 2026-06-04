@@ -1,4 +1,11 @@
 
+## [0.0.21](https://github.com/ncfour-us/logging/compare/v0.0.20...v0.0.21) (2026-06-04)
+
+
+### Bug Fixes
+
+* rename introduction.md to index.md ([3366f66](https://github.com/ncfour-us/logging/commit/3366f66938c02854155476fe4e45c222010083b6))
+
 ## [0.0.20](https://github.com/ncfour-us/logging/compare/v0.0.19...v0.0.20) (2026-06-04)
 
 
