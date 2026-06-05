@@ -73,9 +73,11 @@ precommitConfig?.patch(
   ),
 );
 
-const postCompileTask = project.tasks.tryFind('post-compile');
+// update pre-commit hook implementations to latest (as of 5 June 2026) versions
+precommitConfig?.addOverride('repos.0.rev', 'v4.16.3');
+precommitConfig?.addOverride('repos.1.rev', 'v6.0.0');
 
-postCompileTask?.addSteps({
+project.postCompileTask.addSteps({
   name: 'Generate Typedoc documentation',
   exec: 'pnpm build:docs',
 });
