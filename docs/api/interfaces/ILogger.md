@@ -2,8 +2,6 @@
 
 # Interface: ILogger
 
-Defined in: [logger-types.ts:98](https://github.com/ncfour-us/logging/blob/ad43756a6c03312bf4b97e2d9185fedf7972aa96/src/logger-types.ts#L98)
-
 Interface which represents a logger instance.  Returned from call to `createLogger()`.
 
 ## Methods
@@ -11,8 +9,6 @@ Interface which represents a logger instance.  Returned from call to `createLogg
 ### debug()
 
 > **debug**(`message`, ...`rest`): `void`
-
-Defined in: [logger-types.ts:164](https://github.com/ncfour-us/logging/blob/ad43756a6c03312bf4b97e2d9185fedf7972aa96/src/logger-types.ts#L164)
 
 Create a log message with log level **debug**
 
@@ -40,8 +36,6 @@ additional information to log (this will be appended as a JSON string to the mes
 
 > **error**(`message`, ...`rest`): `void`
 
-Defined in: [logger-types.ts:140](https://github.com/ncfour-us/logging/blob/ad43756a6c03312bf4b97e2d9185fedf7972aa96/src/logger-types.ts#L140)
-
 Create a log message with log level **error**
 
 #### Parameters
@@ -67,8 +61,6 @@ additional information to log (this will be appended as a JSON string to the mes
 ### fatal()
 
 > **fatal**(`message`, ...`rest`): `void`
-
-Defined in: [logger-types.ts:132](https://github.com/ncfour-us/logging/blob/ad43756a6c03312bf4b97e2d9185fedf7972aa96/src/logger-types.ts#L132)
 
 Create a log message with log level **fatal**
 
@@ -96,8 +88,6 @@ additional information to log (this will be appended as a JSON string to the mes
 
 > **getName**(): `string`
 
-Defined in: [logger-types.ts:103](https://github.com/ncfour-us/logging/blob/ad43756a6c03312bf4b97e2d9185fedf7972aa96/src/logger-types.ts#L103)
-
 Return the name of the logger.
 
 #### Returns
@@ -110,8 +100,6 @@ Return the name of the logger.
 
 > **getType**(): [`LoggerType`](../type-aliases/LoggerType.md)
 
-Defined in: [logger-types.ts:108](https://github.com/ncfour-us/logging/blob/ad43756a6c03312bf4b97e2d9185fedf7972aa96/src/logger-types.ts#L108)
-
 Return the logger type.
 
 #### Returns
@@ -123,8 +111,6 @@ Return the logger type.
 ### info()
 
 > **info**(`message`, ...`rest`): `void`
-
-Defined in: [logger-types.ts:156](https://github.com/ncfour-us/logging/blob/ad43756a6c03312bf4b97e2d9185fedf7972aa96/src/logger-types.ts#L156)
 
 Create a log message with log level **info**
 
@@ -151,8 +137,6 @@ additional information to log (this will be appended as a JSON string to the mes
 ### log()
 
 > **log**(`level`, `message`, ...`rest`): `void`
-
-Defined in: [logger-types.ts:124](https://github.com/ncfour-us/logging/blob/ad43756a6c03312bf4b97e2d9185fedf7972aa96/src/logger-types.ts#L124)
 
 Create a log message with the specified log level.
 
@@ -186,8 +170,6 @@ additional information to log (this will be appended as a JSON string to the mes
 
 > **setLoggerProps**(`props`): `void`
 
-Defined in: [logger-types.ts:115](https://github.com/ncfour-us/logging/blob/ad43756a6c03312bf4b97e2d9185fedf7972aa96/src/logger-types.ts#L115)
-
 Update the logger configuration.
 
 #### Parameters
@@ -211,8 +193,6 @@ Adjustments to the logger configuration
 ### trace()
 
 > **trace**(`message`, ...`rest`): `void`
-
-Defined in: [logger-types.ts:172](https://github.com/ncfour-us/logging/blob/ad43756a6c03312bf4b97e2d9185fedf7972aa96/src/logger-types.ts#L172)
 
 Create a log message with log level **trace**
 
@@ -239,8 +219,6 @@ additional information to log (this will be appended as a JSON string to the mes
 ### warn()
 
 > **warn**(`message`, ...`rest`): `void`
-
-Defined in: [logger-types.ts:148](https://github.com/ncfour-us/logging/blob/ad43756a6c03312bf4b97e2d9185fedf7972aa96/src/logger-types.ts#L148)
 
 Create a log message with log level **warn**
 

@@ -56,6 +56,7 @@ new JsonFile(project, 'typedoc.json', {
     out: 'docs/api',
     cleanOutputDir: true,
     readme: 'none',
+    disableSources: true,
     // typedoc-plugin-markdown options
     entryFileName: 'index',
     mergeReadme: false,

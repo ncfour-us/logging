@@ -9,6 +9,7 @@
   "out": "docs/api",
   "cleanOutputDir": true,
   "readme": "none",
+  "disableSources": true,
   "entryFileName": "index",
   "mergeReadme": false,
   "hidePageHeader": true
