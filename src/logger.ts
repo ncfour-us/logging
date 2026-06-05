@@ -8,7 +8,7 @@ import {
   LoggerSetLoggerProps,
 } from './logger-types.js';
 
-export { ILogger, LoggerLevel, LoggerProps, LoggerSetLoggerProps };
+export { ILogger, LoggerType, LoggerLevel, LoggerProps, LoggerSetLoggerProps };
 
 type LoggerClass = { type: LoggerType; loggerCreator: (props?: LoggerProps) => ILogger };
 
@@ -40,6 +40,13 @@ async function initializeLoggerClasses() {
   }
 }
 
+/**
+ * Create (or get an existing) logger to use.
+ *
+ * @param type The type of logger to create
+ * @param props Initialization properties for the logger
+ * @returns an object that implements the {@link ILogger} interface
+ */
 export function createLogger(type: LoggerType, props?: LoggerProps): ILogger {
   const loggerName = props?.name ?? 'default'; // covers case where props.name === ''
 

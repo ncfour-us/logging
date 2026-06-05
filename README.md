@@ -24,6 +24,7 @@ This project implements a simple logger and a proxy for winston logger.
 
 - [Installation](#installation)
 - [Getting Started](#getting-started)
+- [API Documentation](#api-documentation)
 - [Contributing](#contributing)
 - [License](#license)
 - [Authors](#authors)
@@ -53,6 +54,10 @@ import { ILogger, createLogger } from '@ncfour-us/logging';
 
 const myLogger: ILogger = createLogger('simple');
 ```
+
+## API Documentation
+
+The API is documented at the [API documentation](./docs/api/index.md) page.
 
 ## Contributing
 

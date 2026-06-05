@@ -22,8 +22,9 @@ logger implementations are loaded.  If a requested logger type
 is not available in the environment, a warning message is written
 to the logger which is activated (fallback is to `'simple'` logger).
 
-## Additional sections
+## Additional information
 
 - [Installation](./install.md)
 - [Usage](./usage.md)
 - [Example](./example.md)
+- [API Documentation](./api/index.md)

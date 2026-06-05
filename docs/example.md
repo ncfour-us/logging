@@ -22,7 +22,7 @@ Cut an paste the following into `example.ts`:
 ```typescript
 import { ILogger, createLogger } from '@ncfour-us/logging';
 
-const myLogger: ILogger = await createLogger('simple', {
+const myLogger: ILogger = createLogger('simple', {
     name: 'myLogger',
     level: 'debug',
     json: false,

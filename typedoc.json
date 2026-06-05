@@ -1,0 +1,15 @@
+{
+  "$schema": "https://typedoc.org/schema.json",
+  "plugin": [
+    "typedoc-plugin-markdown"
+  ],
+  "entryPoints": [
+    "./src/logger.ts"
+  ],
+  "out": "docs/api",
+  "cleanOutputDir": true,
+  "readme": "none",
+  "entryFileName": "index",
+  "mergeReadme": false,
+  "hidePageHeader": true
+}

@@ -1,5 +1,5 @@
 import { RepoBuildPackageModel, TypeScriptESMProject } from '@ncfour-us/projen-utils';
-import { javascript } from 'projen';
+import { javascript, JsonFile, JsonPatch } from 'projen';
 
 const project = new TypeScriptESMProject({
   authorName: 'Tim Hahn',
@@ -19,7 +19,7 @@ const project = new TypeScriptESMProject({
   copyrightOwner: 'Tim Hahn',
   copyrightPeriod: '2024',
 
-  devDeps: ['@ncfour-us/projen-utils', '@jest/globals'],
+  devDeps: ['@ncfour-us/projen-utils', '@jest/globals', 'typedoc', 'typedoc-plugin-markdown'],
 
   /* Runtime dependencies of this module. */
   deps: ['chalk', 'winston'],
@@ -42,6 +42,41 @@ project.addFields({
   },
 });
 
+project.addScripts({
+  'build:docs': 'pnpm typedoc',
+});
+
 project.addPackageIgnore('docs');
+
+new JsonFile(project, 'typedoc.json', {
+  obj: {
+    $schema: 'https://typedoc.org/schema.json',
+    plugin: ['typedoc-plugin-markdown'],
+    entryPoints: ['./src/logger.ts'],
+    out: 'docs/api',
+    cleanOutputDir: true,
+    readme: 'none',
+    // typedoc-plugin-markdown options
+    entryFileName: 'index',
+    mergeReadme: false,
+    hidePageHeader: true,
+  },
+  marker: false,
+});
+
+const precommitConfig = project.tryFindObjectFile('.pre-commit-config.yaml');
+precommitConfig?.patch(
+  JsonPatch.replace(
+    '/repos/1/hooks/1/exclude',
+    '^(\.pre-commit-config\.yaml|\.gitignore|\.gitattributes|\.projen/.*|\.github/.*|.*\.svg|\.yarn/.*|LICENSE|.mergify.yml|tsconfig.json|tsconfig.dev.json|.npmignore|API.md|CHANGELOG.md|typedoc.json)$',
+  ),
+);
+
+const postCompileTask = project.tasks.tryFind('post-compile');
+
+postCompileTask?.addSteps({
+  name: 'Generate Typedoc documentation',
+  exec: 'pnpm build:docs',
+});
 
 project.synth();
