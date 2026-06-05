@@ -1,4 +1,16 @@
 
+## [0.0.25](https://github.com/ncfour-us/logging/compare/v0.0.24...v0.0.25) (2026-06-05)
+
+
+### Features
+
+* add API documentation and typedoc generation ([9a82792](https://github.com/ncfour-us/logging/commit/9a827920ab3a91ec9abe81c64bdd254067f1ac83))
+
+
+### Bug Fixes
+
+* remove links to source code in API documentation ([fc1b5f5](https://github.com/ncfour-us/logging/commit/fc1b5f5e4e049112c5c8a909a24a6f71076a12ae))
+
 ## [0.0.24](https://github.com/ncfour-us/logging/compare/v0.0.23...v0.0.24) (2026-06-04)
 
 
